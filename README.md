@@ -15,14 +15,14 @@ A Directive to entirely remove elements from the dom in specific screen width ra
 #### TS
 
 ```javascript
-import { RemoveInRangeDirective } from "ngx-remove-in-range";
+import { RemoveInRangeDirective } from "ngx-remove-in-range"
 
 @Component({
   selector: "app-home",
   standalone: true,
   imports: [CommonModule, RemoveInRangeDirective],
   templateUrl: "./home.component.html",
-  styleUrl: "./home.component.scss",
+  styleUrl: "./home.component.scss"
 })
 export class HomeComponent {}
 ```
@@ -35,6 +35,10 @@ export class HomeComponent {}
 
 <!-- Remove starting from 300px -->
 <h1 *removeInRange="[[300]]">Ahmed</h1>
+
+<!-- Remove starting from 300px up to 600px and starting from 800px up to 1000px -->
+<!-- Visible between 600px and 800px -->
+<h1 *removeInRange="[[300, 600], [800, 1000]]">Ahmed</h1>
 ```
 
 ## Author
